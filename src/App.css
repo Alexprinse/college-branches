@@ -1,25 +1,85 @@
-import React from 'react';
-import './App.css';
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Section from './components/Section';
-import Footer from './components/Footer';
+body {
+  font-family: 'Georgia', serif;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
-const App = () => {
-  return (
-    <div className="App">
-      <Header />
-      <Nav />
-      <main>
-        <Section id="cse" title="Computer Science Engineering (CSE)" content="Computer Science Engineering (CSE) is an academic program that integrates the field of Computer Engineering and Computer Science. The program emphasizes the basics of computer programming and networking and includes a plethora of topics." />
-        <Section id="ece" title="Electronics and Communication Engineering (ECE)" content="Electronics and Communication Engineering (ECE) involves researching, designing, developing, and testing electronic equipment used in various systems. Electronics and Communication engineers conceptualize and oversee the manufacturing of communications and broadcast systems." />
-        <Section id="eee" title="Electrical and Electronics Engineering (EEE)" content="Electrical and Electronics Engineering (EEE) is the study and application of electrical systems for use in different environments and contains basic electronic courses and more advanced electrical engineering courses." />
-        <Section id="civil" title="Civil Engineering" content="Civil Engineering is a professional engineering discipline that deals with the design, construction, and maintenance of the physical and naturally built environment, including works like roads, bridges, canals, dams, and buildings." />
-        <Section id="mech" title="Mechanical Engineering (MECH)" content="Mechanical Engineering (MECH) involves the design, production, and operation of machinery. It applies the principles of engineering, physics, and materials science for the analysis, design, manufacturing, and maintenance of mechanical systems." />
-      </main>
-      <Footer />
-    </div>
-  );
-};
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-export default App;
+header {
+  background-color: #1E56A0;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+nav {
+  background-color: #ffffff;
+  text-align: center;
+  border-bottom: 2px solid #1E56A0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1E56A0;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
+  font-size: 2em;
+  color: #1E56A0;
+  margin-bottom: 10px;
+}
+
+section p {
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+footer {
+  background-color: #1E56A0;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
